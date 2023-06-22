@@ -1,0 +1,626 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ========== END OF RESET ============== */
+
+
+/* ========== general layout and styling ============== */
+body {
+	background-image: url(./images/bg_header.png);
+	background-repeat: repeat-x;
+	background-size: 699px;
+	font-family: 'Proza Libre', Verdana, Arial, Tahoma, Trebuchet, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+header, .banner, .content, .contact, .about_pg, .bakery_items {
+	padding: 2.25vw;
+}
+
+a {
+	font-size: 10px;
+	line-height: 2em;
+	text-decoration: none;
+	color: #F8F8F6;
+}
+
+a:hover {
+	color: #C89262;
+}
+
+h1 {
+	font-family: 'Marck Script', 'Snell Roundhand', cursive;
+	font-size: 1.6em;
+	text-align: center;
+}
+
+h2 {
+	font-size: .9em;
+	line-height: 1.8em;
+	color: #1E1E1E;
+	text-align: center;
+	padding-bottom: 2.5em;
+}
+
+figcaption {
+	text-align: center;
+	padding: .8vw;
+	font-size: .7em;
+}
+
+p {
+	font-weight: 400;
+	font-size: .8em;
+	line-height: 1.4em;
+	color: #1E1E1E;
+}
+
+h3 {
+	font-size: .85em;
+	line-height: 1em;
+	color: #1E1E1E;
+	padding-bottom: .5em;
+}
+
+li {
+	font-size: 10px;
+	line-height: 2em;
+}
+
+main > img {
+	width: 100%;
+}/* image inside main */
+
+.content, .contact, .about_pg, .contact_pg, .bakery_items {
+	padding: 5.3vw 12.5vw;
+}/* box wrapping best produts and about, and contact  */
+
+
+/* ========== header ============== */
+.head {
+	display: flex;
+	justify-content: space-between;
+	height: 20px;
+	align-items: center;
+}
+
+.head > img {
+	width: 70px;
+}
+
+
+#nav {
+	display: flex;
+	gap: 3vw;
+}
+
+
+/* ========== banner ============== */
+.banner {
+	display: flex;
+	flex-direction: column;
+	height: 194px;
+	align-items: center;
+	justify-content: center;
+	color: #F8F8F6;
+}
+
+.banner > h2 {
+	line-height: 1.8em;
+	color: #F8F8F6;
+	padding-bottom: 0em;
+}
+
+.line {
+	width: 50%;
+	height: 0px;
+	border: 1px solid #F8F8F6;
+	margin: 1.3vw 0.3vw;
+	
+}
+
+/* ========== Best products ============== */
+
+figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.best_items {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 4vw;
+	place-items: center;
+}
+
+.best_items > figure > img {
+	width: 220px;
+}
+
+.best_products {
+	padding-bottom: 5.9vw;
+}
+
+
+
+/* ========== about ============== */
+
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.25vw;
+}
+
+.about > section > h2 {
+	text-align: left;
+	padding-bottom: 0.7vw;
+}
+
+.img {
+	display: flex;
+	gap: 1.4vw;
+	padding-top: 10px;
+}
+
+#img {
+	display: flex;
+	flex-direction: column;
+	gap: 1.4vw;
+}
+
+#img > img {
+	width: 125px;
+}
+
+.img > div + div > img {
+	width: 120px;
+}
+
+
+/* ========== contact ============== */
+
+.map {
+	text-decoration:none; 
+	overflow:hidden;
+	max-width:100%;
+	width: 576px;
+	height: 320px;
+}
+
+#display-google-map {
+	height:100%; 
+	width:100%;
+	max-width:100%;
+}
+
+iframe {
+	height:100%;
+	width:100%;
+	border:0;
+}
+
+#display-google-map .map-generator{
+	max-width: 100%; 
+	max-height: 100%; 
+	background: none;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3em;
+}
+
+.contact_details {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+}
+
+.contact_details > div > section > h3, .contact_details > section > h3 {
+	padding-bottom: 0vw;
+}
+
+/* ========== footer ============== */
+
+footer {
+	background: #212227;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+   	justify-items: center;
+	padding: 3.1vw;
+	font-weight: 400;
+	font-size: 0.9em;
+	line-height: 1.9em;
+	color: #F8F8F6;
+	bottom: 0px;
+}
+
+footer > img {
+	padding-right: 26.8px;
+}
+
+main > h2, main > .contact_pg >h2 {
+	text-align: left;
+}
+
+.footer_section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1vw;
+}
+
+
+/* ========== contact page ============== */
+
+.contact_pg > .contact {
+	padding: 0vw;
+}
+
+.contact_pg {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25vw;
+	justify-content: center;
+}
+
+/* ========== about page ============== */
+
+
+.about_content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2vw;
+}
+
+.about_pg > div + div {
+	padding-top: 3vw;
+}
+
+.about_content > img {
+	width: 300px;
+}
+
+
+/* ========== product page ============== */
+
+.item_section > figure {
+	position: relative;
+	display: flex;
+}
+
+.item_section > figure, .item_section > figure > figcaption {
+	width: 220px;
+}
+
+.item_section > figure > figcaption {
+	position: absolute;
+	bottom: 0px;
+	background: rgba(217, 217, 217, 0.8);
+	height: 43px;
+	padding: 0vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.item_section {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 4vw;
+	place-items: center;
+}
+
+.item_section > figure > img {
+	width: 220px;
+}
+
+/* ========== resposive styling ============== */
+
+/* break point 1 */
+@media (min-width: 700px) {
+	body {
+		background-size: 1024px;
+	}
+
+	.content, .contact, .about_pg, .contact_pg, .bakery_items {
+		padding: 5.3vw 8vw;
+	}
+	
+	h1 {
+		font-size: 2.9em;
+	}
+	
+	h2 {
+		font-size: 1.2em;
+		line-height: 2em;
+		padding-bottom: 15px;
+	}
+	
+	figcaption {
+		padding: 1vw;
+		font-size: .9em;
+	}
+	
+	p {
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+	
+	h3 {
+		font-size: 1em;
+		line-height: 1.4em;
+		padding-bottom: .5em;
+	}
+	
+	/* ========== header ============== */
+
+	.head > img {
+		width: 100px;
+	}
+
+	a {
+		font-size: 15px;
+	}
+
+	.head {
+		height: 38px;
+	}
+	
+	
+	/* ========== banner ============== */
+	.banner {
+		height: 244px;
+	}
+
+	.line  {
+		border: 1.5px solid #F8F8F6;
+	}
+
+	/* ========== content ============== */
+
+	.best_items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.best_items > figure > img {
+		width: 300px;
+	}
+	
+
+	.img {
+		padding-top: 0px;
+	}
+
+	#img > img {
+		width: 268px;
+	}
+	
+	.img > div + div > img {
+		width: 267px;
+	}
+
+
+	/* ========== footer ============== */
+
+	li {
+		font-size: 15px;
+	}
+
+	footer > img {
+		padding-right: 115px;
+	}
+
+	/* ========== about page ============== */
+
+	.about_content > img {
+		width: 371px;
+	}
+
+	.about_pg > div + div > img {
+		width: 395px;
+	}
+
+	/* ========== product page ============== */
+
+	.item_section {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.item_section > figure > img {
+		width: 308px;
+	}
+
+	.item_section > figure, .item_section > figure > figcaption {
+		width: 308px;
+	}
+
+	/* ========== contact page ============== */
+
+	.contact_pg > .contact > .map {
+		height: 450px;
+	}
+	
+}
+
+/* break point 2 */
+@media (orientation: landscape) and (min-width: 1025px){
+
+	.content, .contact, .about_pg, .contact_pg, .bakery_items {
+		padding: 5.3vw 12.5vw;
+	}
+
+	.about, .contact, .footer_section, .best_items, .about_pg > div + .about_content {
+		flex-direction: row;
+	}
+
+	body {
+		background-size: 1440px;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+
+	h2 {
+		font-size: 1.4em;
+		line-height: 2.6em;
+	}
+
+	figcaption {
+		padding: 0.35vw;
+		font-size: 1em;
+	}
+
+	p {
+		font-size: 1.1em;
+		line-height: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.12em;
+		line-height: 1.9em;
+		padding-bottom: 1em;
+	}
+
+	/* ========== home page ============== */
+
+	.head > img {
+		width: 166px;
+	}
+
+	a {
+		font-size: 1.12em;
+	}
+
+	.head {
+		height: 55px;
+	}
+
+	.banner {
+		height: 324px;
+	}
+
+	.line {
+		border: 2px solid #F8F8F6;
+	}
+
+	.best_items {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1vw;
+	}
+
+	.best_items > figure > img {
+		width: 240px;
+	}
+
+	.best_items, .contact_details, footer {
+		justify-content: space-between;
+	}
+
+	.best_items > figure > figcaption {
+		padding-top: 1.8vw;
+	}
+
+	.about > section {
+		padding-right: 1vw;
+	}
+
+	.contact_details {
+		flex-direction: column;
+	}
+
+	footer {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	footer > img {
+		padding-right: 0px;
+	}
+
+
+	/* ========== about page ============== */
+
+	.about_content {
+		flex-direction: row-reverse;
+		align-items: initial;
+	}
+	
+	.about_content > section > h3 {
+		padding-top: 1.5vw;
+	}
+
+
+	/* ========== product page ============== */
+
+	.item_section {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* ========== contact page ============== */
+
+	.contact_pg > .contact > .map {
+		height: 330px;
+	}
+}
+
+@media (min-width: 1140px) {
+	.best_items > figure > img {
+		width: 280px;
+	}
+}
+
